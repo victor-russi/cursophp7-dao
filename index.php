@@ -17,10 +17,21 @@ require_once("config.php");
 //echo json_encode($search);
 
 //carrega um usuário usando o login e a senha
+//$usuario = new Usuario();
+//$usuario->login("root", "!$@#");
+//echo $usuario;
+
+
+//Criando um novo usuário
+//$aluno = new Usuario("aluno", "@lun0");
+//$aluno->insert();
+//echo $aluno;
 
 $usuario = new Usuario();
 
-$usuario->login("root", "!$@#");
+$usuario->loadById(1);
+
+$usuario->update("atualizedd", "!@#$%&*");
 
 echo $usuario;
 
